@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <style>
+    body {
+      font-family: "Courier New", Courier, monospace;
+      text-align: center;
+      background-color: azure;
+      margin: 8%;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      width: 50em;
+      font-family: "Courier New", Courier, monospace;
+    }
+  </style>
+  <body>
+    <h1>Array Methods Demo</h1>
+
+    <!-- Create an array -->
+    <script>
+      const myArray = [1, 2, 3, 4, 5];
+    </script>
+
+    <!-- Array length method -->
+    <h2>Array Length</h2>
+    <p>The length of the array is: <span id="arrayLength"></span></p>
+    <button onclick="getArrayLength()">Get Array Length</button>
+
+    <!-- Array toString method -->
+    <h2>Array toString()</h2>
+    <p>The array as a string is: <span id="arrayToString"></span></p>
+    <button onclick="getArrayToString()">Get Array toString()</button>
+
+    <!-- Array pop method -->
+    <h2>Array pop()</h2>
+    <p>Removed element from the end: <span id="arrayPop"></span></p>
+    <button onclick="removeFromArray()">Remove from Array</button>
+
+    <script>
+      function getArrayLength() {
+        const arrayLength = myArray.length;
+        document.getElementById("arrayLength").textContent = arrayLength;
+      }
+
+      function getArrayToString() {
+        const arrayString = myArray.toString();
+        document.getElementById("arrayToString").textContent = arrayString;
+      }
+
+      function removeFromArray() {
+        const removedElement = myArray.pop();
+        document.getElementById("arrayPop").textContent = removedElement;
+      }
+    </script>
+  </body>
+</html>
